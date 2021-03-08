@@ -1,0 +1,49 @@
+/*------ Varibles -------*/
+
+@import './variables';
+
+/*------ helper classes -------*/
+@import './helperClasses.scss';
+
+/*------ Styles -------*/
+
+.side-bar-wrapper {
+  min-height: 100vh;
+  width: 280px;
+  .side-bar-header {
+    padding: 8px 15px;
+    color: $white;
+    background-color: $yellow;
+    justify-content: space-between;
+  }
+  .arrow-down {
+    transform: rotate(90deg);
+  }
+  .active {
+    color: $yellow !important;
+  }
+  .side-bar-item {
+    justify-content: space-evenly;
+    background-color: $sidebar-list;
+    color: $white;
+    padding: 15px 10px;
+    border-bottom: 1px solid #213f63;
+    .flex {
+      width: 70%;
+      i {
+        margin: 0px 15px 0px 0px;
+      }
+    }
+    .arrow {
+      margin: 6px 0px 0px 0px;
+    }
+  }
+  .dropdown {
+    background-color: $dropdown-background;
+    color: $white;
+    padding: 10px;
+    .arrow {
+      margin: 2px 15px 0px 40px;
+    }
+  }
+}
