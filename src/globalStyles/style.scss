@@ -63,6 +63,7 @@
 .narrow-sidebar {
   height: 100vh;
   overflow-y: scroll;
+  max-width: 81px;
   &::-webkit-scrollbar {
     width: 0; /* Remove scrollbar space */
     background: transparent; /* Optional: just make scrollbar invisible */
@@ -72,10 +73,10 @@
     color: $white;
     background-color: $yellow;
     justify-content: space-between;
-    position: fixed;
+    width: 100%;
   }
   .side-bar-menu {
-    margin-top: 57px;
+    // margin-top: 57px;
     .arrow-down {
       transform: rotate(90deg);
     }
@@ -103,7 +104,7 @@
       color: $white;
       padding: 10px;
       .arrow {
-        margin: 2px 15px 0px 58px;
+        margin: 2px 15px 0px 2px;
       }
       &:active {
         color: $yellow;
@@ -118,6 +119,7 @@
   align-items: center;
   justify-content: space-evenly;
   box-shadow: 0px 0px 5px 1px rgb(194, 194, 194);
+  position: fixed;
   div {
     position: relative;
     .search-field {
@@ -163,5 +165,222 @@
   .arrow {
     transform: rotate(90deg);
     margin: 6px 5px;
+  }
+}
+
+//----------------CArd-------------------
+
+.number-card-wrapper {
+  background-color: #fff;
+  width: 33%;
+  height: 100%;
+  margin: 0 10px;
+  .student {
+    background-color: #85c048;
+  }
+  .teacher {
+    background-color: #1e91e4;
+  }
+  .earning {
+    background-color: #00c9d3;
+  }
+  .parent {
+    background-color: #ffdf36;
+  }
+  .icon-wrapper {
+    width: 35%;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+  }
+  .info {
+    width: 65%;
+    justify-content: center;
+    margin-left: 10%;
+    flex-direction: column;
+  }
+}
+//---------------Social Card----------------
+
+.facebook {
+  background-color: #415a99;
+}
+.google {
+  background-color: #c03929;
+}
+.twitter {
+  background-color: #3e8fcd;
+}
+.linkedin {
+  background-color: #1665c1;
+}
+.social-card-wrapper {
+  min-width: 47.6%;
+  height: 141px;
+  color: #fff;
+  img {
+    width: 20px;
+    height: 20px;
+    color: #fff;
+    background-color: #fff;
+  }
+  &:nth-child(1) {
+    margin-right: 3%;
+    margin-bottom: 17px;
+  }
+  &:nth-child(2) {
+    margin-bottom: 17px;
+  }
+  &:nth-child(3) {
+    margin-right: 3%;
+    margin-bottom: 8px;
+  }
+  .icon-wrapper {
+    padding: 20px 0px 10px 17px;
+    width: 46%;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    p:nth-child(2) {
+      margin-top: 20px;
+    }
+  }
+  .divider {
+    height: 50px;
+    margin-top: 63px;
+    background-color: rgb(255, 255, 255);
+  }
+  .info {
+    // width: 56%;
+    justify-content: flex-end;
+    flex-direction: column;
+    margin: 0px 0px 25px 0px;
+    padding-left: 30px;
+  }
+}
+
+// --------------- Admin ------------------
+
+//---------Calander-----------
+.calan {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.3rem;
+  h3 {
+    text-align: left !important;
+    padding: 5px;
+  }
+  .calandar {
+    width: 100%;
+    background-color: #fff;
+    padding: 10px;
+    margin-top: 10px;
+    .react-calendar__navigation {
+      position: relative;
+      height: 35px;
+    }
+    .react-calendar__navigation__prev-button {
+      background-color: #fdc800;
+      position: absolute;
+      left: 60px;
+    }
+    .react-calendar__navigation__label {
+      width: 150px !important;
+      border: none;
+      background-color: rgb(255, 255, 255);
+      font-size: 23px;
+    }
+    .react-calendar__navigation__prev2-button {
+      background-color: #fdc800;
+      position: absolute;
+      left: 10px;
+    }
+    .react-calendar__navigation__next-button {
+      background-color: #ebebeb;
+      position: absolute;
+      right: 60px;
+    }
+    .react-calendar__navigation__next2-button {
+      background-color: #ebebeb;
+      position: absolute;
+      right: 10px;
+    }
+    .react-calendar__navigation__arrow {
+      width: 45px;
+      border-radius: 43%;
+
+      color: #fff;
+      font-size: 22px;
+      font-weight: 600;
+      padding-bottom: 6px;
+      margin: 0 5px;
+      outline: none;
+      border: none;
+      &:hover {
+        background-color: rgb(52, 185, 97);
+        cursor: pointer;
+      }
+    }
+    .react-calendar__month-view__weekdays {
+      background-color: #f0f1f3;
+      border: 1px solid rgb(175, 175, 175);
+      height: 40px;
+      margin: 15px 0px 15px 0px;
+      text-align: center;
+      .react-calendar__month-view__weekdays__weekday {
+        &:hover {
+          background-color: rgb(52, 185, 97);
+        }
+      }
+    }
+    .react-calendar__month-view__days {
+      height: 250px !important;
+      .react-calendar__tile {
+        height: 42px;
+        border: none;
+        border: 1px solid rgb(175, 175, 175);
+        width: 70px;
+        &:hover {
+          background-color: rgb(52, 185, 97);
+        }
+      }
+      .react-calendar__tile--active {
+        background-color: rgb(52, 185, 97);
+      }
+    }
+  }
+}
+
+//-----------------------------------
+
+.admin-wrapper {
+  background-color: #f0f1f3;
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 120px 300px 500px;
+  grid-gap: 20px;
+  .cards {
+    grid-column: 1/-1;
+  }
+  .graph {
+    grid-column: 1/3;
+    background-color: #fff;
+  }
+  .social-media {
+    grid-column: 3/5;
+    flex-wrap: wrap;
+  }
+  .callender {
+    grid-column: 1/3;
+    background-color: #fff;
+  }
+  .notice-board {
+    grid-column: 3/4;
+    background-color: #fff;
+  }
+  .recent-activities {
+    grid-column: 4/5;
+    background-color: #fff;
   }
 }
